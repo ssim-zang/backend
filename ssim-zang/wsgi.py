@@ -1,5 +1,5 @@
 """
-WSGI config for c_shop project.
+WSGI config for ssim-zang project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'c_shop.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ssim-zang.settings')
 
 application = get_wsgi_application()
