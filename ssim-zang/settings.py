@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'c_shop',
+    'drf-yasg',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'ssim-zang.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql', # 사용할 데이터베이스 엔진
+        'NAME': 'cshop', # 데이터베이스 이름 
+        'USER': 'root', # 접속할 Database 계정 아이디 ex) root
+        'PASSWORD': '',  # 접속할 Database 계정 비밀번호 ex) 1234
+        'HOST': 'localhost',   # host는 로컬 환경에서 동작한다면 ex) localhost
+        'PORT': '3306', # 설치시 설정한 port 번호를 입력한다. ex) 3306
     }
 }
 
@@ -103,15 +109,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
+
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'  # 한국 시간 적용 
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False  # False 로 설정해야 DB에 변경 된 TIME_ZONE 이 반영 됨 
 
 
 # Static files (CSS, JavaScript, Images)
