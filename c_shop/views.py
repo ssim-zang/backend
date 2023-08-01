@@ -15,5 +15,13 @@ def login(request):
     return render(request, "login.html")
 
 def myPage(request):
+    if(not request.session.get('id')):
+        return redirect('/login/')
+    return render(request, "mypage.html")
+
+def shop(request):
+    return render(request, "mypage.html")
+
+def project(request):
     return render(request, "mypage.html")
 

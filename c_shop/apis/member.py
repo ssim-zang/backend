@@ -2,7 +2,7 @@ from c_shop.models import Member
 from django.http import JsonResponse
 from django.http import HttpResponse
 from django.core import serializers
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 
 
 def create(request):
@@ -24,6 +24,13 @@ def login(request):
         return HttpResponse(status=200)
     except:
         return HttpResponse(status=400)
+def logout(request):
+    try:
+        request.session['id'] = None
+        request.session['name'] = None
+        return redirect('/')
+    except:
+        return redirect('/')
 # def read(pk):
 #     try:
 #             question = get_object_or_404(Question, pk=question_id)

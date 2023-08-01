@@ -28,8 +28,8 @@
           <h1 id="logo"><a href="index.html">C#</a></h1>
           <nav id="nav">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="list.html">Project</a></li>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'project' %}">Project</a></li>
               <li>
                 <a href="#">Connect</a>
                 <ul>
@@ -37,7 +37,7 @@
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
               </li>
-              <li><a href="shop.html">Shop</a></li>
+              <li><a href="{% url 'shop' %}">Shop</a></li>
 
                 {% if request.session.id %}
                 <!-- 로그인 했을 때 -->
@@ -80,35 +80,7 @@
     <script src="{% static 'js/main.js' %}"></script>
 
     <script>
-    function getCookie(name) {
-      var cookieValue = null;
-      if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-          var cookie = cookies[i].trim();
-          // Does this cookie string begin with the name we want?
-          if (cookie.substring(0, name.length + 1) === (name + '=')) {
-            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-            break;
-          }
-        }
-      }
-      return cookieValue;
-    }
-
-    var csrftoken = getCookie('csrftoken');
-
-    function csrfSafeMethod(method) {
-      // these HTTP methods do not require CSRF protection
-      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-    }
-    $.ajaxSetup({
-      beforeSend: function (xhr, settings) {
-        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-          xhr.setRequestHeader("X-CSRFToken", csrftoken);
-        }
-      }
-    });
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     </script>
 
     <!-- 페이지별 추가 스크립트 추가 -->

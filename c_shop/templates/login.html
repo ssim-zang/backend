@@ -19,6 +19,7 @@
           <!-- sign up 컨테이너(회원가입) -->
         <div class="sign-up-container">
           <form onSubmit="return signUp(this);">
+              {% csrf_token %}
             <h1>Create Account</h1>
             <span>or use your Student ID for registration</span>
             <input name="name" type="text" placeholder="Name" >
@@ -35,6 +36,7 @@
         <!-- sign in 컨테이너(로그인) -->
         <div class="sign-in-container">
           <form onSubmit="return signIn(this);">
+              {% csrf_token %}
             <h1>Sign In</h1>
             <span>or use your account</span>
             <input name="id" type="ID" placeholder="ID" id="signInId">

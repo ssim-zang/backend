@@ -11,7 +11,7 @@
 
 <!-- 본문 (body) 내용 추가 -->
 {% block content %}
-<div class="main-content">
+  <div class="main-content">
           <!-- Top navbar -->
           <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
             <div class="container-fluid">
@@ -87,7 +87,7 @@
                 <div class="col-lg-7 col-md-10">
                   <h1 class="display-2 text-white">Hello Friends!</h1>
                   <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-                  <a href="#!" class="btn btn-info">Edit profile</a>
+                  <a href="#editProfileBody" class="btn btn-info">Edit profile</a>
                 </div>
               </div>
             </div>
@@ -110,25 +110,25 @@
                   <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                     <div class="d-flex justify-content-between">
                       <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
-                      <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+                      <a href="{% url 'memberLogout' %}" class="btn btn-sm btn-default float-right">Log-Out</a>
                     </div>
                   </div>
                   
-                  <div class="card-body pt-0 pt-md-4">
+                  <div class="card-body pt-0 pt-md-4" id="editProfileBody">
                     <div class="row">
                       <div class="col">
                         <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                           <div>
-                            <span class="heading">22</span>
-                            <span class="description">Friends</span>
+                            <span class="heading">100</span>
+                            <span class="description">남은 열매</span>
                           </div>
                           <div>
-                            <span class="heading">10</span>
-                            <span class="description">Photos</span>
+                            <span class="heading">8</span>
+                            <span class="description">환생횟수</span>
                           </div>
                           <div>
-                            <span class="heading">89</span>
-                            <span class="description">Comments</span>
+                            <span class="heading">12</span>
+                            <span class="description">내 게시물</span>
                           </div>
                         </div>
                       </div>
@@ -159,7 +159,7 @@
                             <img src="{% static 'images/seedimg/Seed-lev7.png'%}" alt="seedimg">
                         </div>
                         <div class="text-center__fruitNum">
-                            <img src="{% static 'images/seedimg/apple.png'%}" alt="fruitimg"><p class="text-center__fruitNum__text">&nbsp;&nbsp;x&nbsp;100</p>
+                            <img src="{% static 'images/seedimg/fruit.png'%}" alt="fruitimg"><p class="text-center__fruitNum__text">&nbsp;&nbsp;x&nbsp;100</p>
                         </div>
                     </div>
 
@@ -175,7 +175,7 @@
                         <h3 class="mb-0">My account</h3>
                       </div>
                       <div class="col-4 text-right">
-                        <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                        <a href="#!" class="btn btn-sm btn-primary">Done</a>
                       </div>
                     </div>
                   </div>
