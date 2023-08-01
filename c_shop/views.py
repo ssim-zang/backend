@@ -4,6 +4,9 @@ from .apis import member as MemberAPI
 from django.shortcuts import redirect
 
 def index(request):
+    # if(request.session.get('id')):
+    #     request.session['id'] = None
+    
     return render(request, "index.html")
 
 def login(request):

@@ -1,50 +1,18 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="{% static 'js/login.js' %}" defer></script>
-  <title>Login</title>
-  <!-- 로그인 영역 스타일 -->
-  <link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">
-  <!-- 공통요소 스타일 -->
-  <link rel="stylesheet" href="{% static 'css/common.css' %}" />
-  <noscript>
-    <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
-  </noscript>
+<!-- 페이지별 title -->
+{% block title %}Login{% endblock %}
 
-</head>
+<!-- head 부분 페이지별 추가적인 css, js 있으면 여기에 -->
+{% block extra_code %}
+<link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">
 
-<body>
+{% endblock %}
 
-  <!-- div#page-wrapper + #header #footer + header 스타일 추가 + 하위 script 8개 추가,  -->
-  <div id="page-wrapper">
+<!-- 본문 (body) 내용 추가 -->
+{% block content %}
 
-    <!-- Header -->
-    <header id="header">
-      <h1 id="logo"><a href="index.html">C#</a></h1>
-      <nav id="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="list.html">Project</a></li>
-          <li>
-            <a href="#">Connect</a>
-            <ul>
-              <li><a href="community.html">Community</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="login.html" class="button primary">Sign Up</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- 본문 -->
-
-    <!-- 전체 박스 -->
     <div class="wrapper">
       <!-- 실질적인 내용 -->
       <div class="container">
@@ -93,59 +61,12 @@
         </div>
       </div>
     </div>
+{% endblock %}
 
-  <!-- 본문 끝 -->
+<!-- 페이지별 추가 스크립트 추가 -->
+{% block extra_script %}
 
-  <!-- Footer -->
-  <footer id="footer">
-    <ul class="copyright">
-      <li>&copy; Untitled. All rights reserved.</li>
-      <li>Team : ssim-zang</li>
-    </ul>
-  </footer>
-
-  <!-- script -->
-  {% static '' %}
-  <script src="{% static 'js/jquery.min.js' %}"></script>
-  <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
-  <script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
-  <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
-  <script src="{% static 'js/browser.min.js' %}"></script>
-  <script src="{% static 'js/breakpoints.min.js' %}"></script>
-  <script src="{% static 'js/util.js' %}"></script>
-  <script src="{% static 'js/main.js' %}"></script>
-
-  <script>
-    function getCookie(name) {
-      var cookieValue = null;
-      if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-          var cookie = cookies[i].trim();
-          // Does this cookie string begin with the name we want?
-          if (cookie.substring(0, name.length + 1) === (name + '=')) {
-            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-            break;
-          }
-        }
-      }
-      return cookieValue;
-    }
-
-    var csrftoken = getCookie('csrftoken');
-
-    function csrfSafeMethod(method) {
-      // these HTTP methods do not require CSRF protection
-      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-    }
-    $.ajaxSetup({
-      beforeSend: function (xhr, settings) {
-        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-          xhr.setRequestHeader("X-CSRFToken", csrftoken);
-        }
-      }
-    });
-
+<script>
     function signIn(obj) {
       if (!obj.id.value) {
         alert("id를 입력해주세요.");
@@ -199,7 +120,6 @@
       });
       return false;
     }
-  </script>
-</body>
-
-</html>
+    
+    </script>
+{% endblock %}

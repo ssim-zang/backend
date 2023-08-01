@@ -34,20 +34,20 @@ def login(request):
 #     except:
 #         return UNKNOWN_ERROR
 
-def update(member):
-    try:
-        member.save()
-        return SUCCESS # true: 성공, false: 실패
-    except:
-        return UNKNOWN_ERROR
+# def update(member):
+#     try:
+#         member.save()
+#         return SUCCESS # true: 성공, false: 실패
+#     except:
+#         return UNKNOWN_ERROR
     
-def delete(pk):
-    try:
-        result = Member.objects.filter(pk=pk)
-        if(result < 1):
-            return NOT_FOUND_USER
+# def delete(pk):
+#     try:
+#         result = Member.objects.filter(pk=pk)
+#         if(result < 1):
+#             return NOT_FOUND_USER
         
-        result.delete()
-        return SUCCESS # true: 성공, false: 실패
-    except:
-        return UNKNOWN_ERROR
+#         result.delete()
+#         return SUCCESS # true: 성공, false: 실패
+#     except:
+#         return UNKNOWN_ERROR
