@@ -18,8 +18,9 @@ def create(request):
     
 def login(request):
     try:
-        get_object_or_404(Member, pk=request.POST['id'], pw = request.POST['pw'])
-        request.session['id'] = request.POST['id']
+        user = get_object_or_404(Member, pk=request.POST['id'], pw = request.POST['pw'])
+        request.session['id'] = user._id
+        request.session['name'] = user.name
         return HttpResponse(status=200)
     except:
         return HttpResponse(status=400)

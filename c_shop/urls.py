@@ -6,6 +6,7 @@ from .apis import member
 urlpatterns = [
     path("", views.index, name="index"),
     path("login", views.login, name="login"),
+    path("mypage", views.myPage, name="myPage"),
     
     
     path("member/create", member.create, name="memberCreate"),

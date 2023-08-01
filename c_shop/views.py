@@ -14,5 +14,6 @@ def login(request):
         return redirect('/')
     return render(request, "login.html")
 
-
+def myPage(request):
+    return render(request, "mypage.html")
 

@@ -38,7 +38,16 @@
                 </ul>
               </li>
               <li><a href="shop.html">Shop</a></li>
-              <li><a href="login.html" class="button primary">Sign Up</a></li>
+
+                {% if request.session.id %}
+                <!-- 로그인 했을 때 -->
+                <li><a href="{% url 'myPage' %}">Mypage</a></li>
+                <li><span>{{ request.session.name }}</span> 님</li>
+                {% else %}
+                <!-- 로그인 안했을 때 -->
+                <li><a href="{% url 'login' %}" class="button primary">Sign In</a></li>
+                {% endif%}
+
             </ul>
           </nav>
         </header>
