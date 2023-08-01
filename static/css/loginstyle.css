@@ -18,7 +18,7 @@ body {
   background: #ebecf0;
   overflow: hidden;
 }
-.container {
+.wrapper .container {
   border-radius: 10px;
   box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
   position: absolute;
@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-form {
+.wrapper form {
   background: #ebecf0;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ form {
   align-items: center;
 }
 
-form input {
+.wrapper form input {
   background: #eee;
   padding: 16px;
   margin: 8px 0;
@@ -48,7 +48,7 @@ form input {
   box-shadow: inset 7px 2px 10px #babebc, inset -5px -5px 12px #fff;
 }
 
-button {
+.wrapper button {
   border-radius: 20px;
   border: none;
   outline: none;
@@ -62,21 +62,21 @@ button {
   transition: transform 80ms ease-in;
 }
 
-.form_btn {
+.wrapper .form_btn {
   box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
 }
 
-.form_btn:active {
+.wrapper .form_btn:active {
   box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
 }
 
-.overlay_btn {
+.wrapper .overlay_btn {
   background-color: #ff4b2b;
   color: #fff;
   box-shadow: -5px -5px 10px #ff6b3f, 5px 5px 8px #bf4b2b;
 }
 
-.sign-in-container {
+.wrapper .sign-in-container {
   position: absolute;
   left: 0;
   width: 50%;
@@ -84,7 +84,7 @@ button {
   transition: all 0.5s;
 }
 
-.sign-up-container {
+.wrapper .sign-up-container {
   position: absolute;
   left: 0;
   width: 50%;
@@ -93,7 +93,7 @@ button {
   transition: all 0.5s;
 }
 
-.overlay-left {
+.wrapper .overlay-left {
   display: flex;
   flex-direction: column;
   padding: 0 50px;
@@ -109,7 +109,7 @@ button {
   transition: all 0.5s;
 }
 
-.overlay-right {
+.wrapper .overlay-right {
   display: flex;
   flex-direction: column;
   padding: 0 50px;
@@ -124,53 +124,53 @@ button {
   transition: all 0.5s;
 }
 
-.container.right-panel-active .sign-in-container {
+.wrapper .container.right-panel-active .sign-in-container {
   transform: translateX(100%);
   opacity: 0;
 }
 
-.container.right-panel-active .sign-up-container {
+.wrapper .container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 2;
 }
 
-.container.right-panel-active .overlay-right {
+.wrapper .container.right-panel-active .overlay-right {
   transform: translateX(-100%);
   opacity: 0;
 }
 
-.container.right-panel-active .overlay-left {
+.wrapper .container.right-panel-active .overlay-left {
   transform: translateX(-100%);
   opacity: 1;
   z-index: 2;
 }
 
-.social-links {
+.wrapper .social-links {
   margin: 20px 0;
 }
 
-form h1 {
+.wrapper form h1 {
   font-weight: bold;
   margin: 0;
   color: #000;
 }
 
-p {
+.wrapper p {
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
 }
 
-span {
+.wrapper span {
   font-size: 12px;
   color: #000;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
 }
 
-.social-links div {
+.wrapper .social-links div {
   width: 40px;
   height: 40px;
   display: inline-flex;
@@ -182,10 +182,10 @@ span {
   cursor: pointer;
 }
 
-.social-links a {
+.wrapper .social-links a {
   color: #000;
 }
 
-.social-links div:active {
+.wrapper .social-links div:active {
   box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
 }
