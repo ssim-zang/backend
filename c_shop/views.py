@@ -23,5 +23,5 @@ def shop(request):
     return render(request, "mypage.html")
 
 def project(request):
-    return render(request, "mypage.html")
+    return render(request, "project.html")
 

@@ -28,7 +28,8 @@ section, summary, time, mark, audio, video {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 body {
 	line-height: 1;
@@ -3351,7 +3352,7 @@ input, select, textarea {
 			}
 
 			.dropotron > li.active > a, .dropotron > li.active > span {
-				color: #e44c65;
+				color: #27d01e
 			}
 
 		.dropotron.level-0 {
@@ -3430,6 +3431,10 @@ input, select, textarea {
 						outline: 0;
 					}
 
+					#header nav ul li span {
+						color: #27d01e;
+					}
+
 						#header nav ul li a.button, #header nav ul li span.button {
 							height: 2em;
 							line-height: 2em;
@@ -3441,7 +3446,8 @@ input, select, textarea {
 						}
 
 					#header nav ul li.active > a, #header nav ul li.active > span {
-						color: #e44c65;
+						/* color: #e44c65; */
+						color: #27d01e;
 					}
 
 					#header nav ul li > ul {
@@ -3463,7 +3469,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: fixed;
 		/* background-color: #272833; */
-		background-image: url("../images/image_main2.png");
+		background-image: url("../../images/메인사진.png");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
