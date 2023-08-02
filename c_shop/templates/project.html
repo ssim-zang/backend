@@ -10,21 +10,24 @@
 
 <!-- 본문 (body) 내용 추가 -->
 {% block content %}
-  <div id="cardOuterbox">
+   <div id="cardOuterbox">
 
     <div id="titleBox">
       <h2 id="cardTitle">Project</h2>
       <p>씨애랑 동아리원이 기획하고 개발한 프로젝트 작품 입니다. </p>
+      <!-- 로그인한 씨애랑 사용자에게만 보여야함(?) -->
+      <button id="writeProject">Project Upload</button>
     </div>
 
-    <div id="cardBox">
+        <div id="cardBox">
 
 
+      <!-- 1 -->
       <div class="cardContainer inactive">
         <div class="card">
           <div class="side front">
             <div class="img img1">
-              <img src="/ssim-zang2/images/ex1.jpg" alt="출처: freepik">
+              <img src="/static/images/pj1.png" alt="">
             </div>
             <div class="info">
               <h2>Caerang WebSite</h2>
@@ -36,9 +39,9 @@
             <div class="info">
               <h2>Caerang WebSite</h2>
               <ul>
-                <li>Web</li>
+                <li>[ Tag ] WebSite</li>
                 <li>씨애랑만의 개발 커뮤니티</li>
-                <li>완성한 프로젝트를 업로드하고 열매를 얻어보세요!</li>
+                <li>매일매일 깃허브에 커밋하고 완성한 프로젝트를 업로드해서 자신만의 열매를 얻어보세요!</li>
               </ul>
               <div class="btn">
                 <h4>View More</h4>
@@ -49,113 +52,27 @@
         </div>
       </div>
 
+      <!-- 2 -->
       <div class="cardContainer inactive">
         <div class="card">
           <div class="side front">
             <div class="img img1">
-              <img src="/ssim-zang2/images/ex2.jpg" alt="">
+              <img src="/static/images/pj2.jpg" alt="출처: freepik">
             </div>
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <p>씨애랑 웹사이트로 깃허브 커밋이나 개발한 프로젝트 업로드하여 열매를 얻을 수 있습니다.
+              <h2>VA/AR 드라이빙 게임</h2>
+              <p>VA 로 직접 드라이빙하는 것과 같은 경험을 느껴보세요!
               </p>
             </div>
           </div>
           <div class="side back">
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <!-- <div class="reviews">
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs><path d="M0 0h24v24H0V0z" id="a"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-                </svg>
-                <p>23 Reviews</p>
-              </div> -->
+              <h2>드라이빙 게임</h2>
               <ul>
-                <li>Web</li>
-                <li>씨애랑만의 개발 커뮤니티</li>
-                <li>완성한 프로젝트를 업로드하고 열매를 얻어보세요!</li>
-              </ul>
-              <div class="btn">
-                <h4>Learn More</h4>
-                <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cardContainer inactive">
-        <div class="card">
-          <div class="side front">
-            <div class="img img1">
-              <img src="/ssim-zang2/images/ex3.jpg" alt="">
-            </div>
-            <div class="info">
-              <h2>Caerang WebSite</h2>
-              <p>씨애랑 웹사이트로 깃허브 커밋이나 개발한 프로젝트 업로드하여 열매를 얻을 수 있습니다.
-              </p>
-            </div>
-          </div>
-          <div class="side back">
-            <div class="info">
-              <h2>Caerang WebSite</h2>
-              <!-- <div class="reviews">
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs><path d="M0 0h24v24H0V0z" id="a"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-                </svg>
-                <p>23 Reviews</p>
-              </div> -->
-              <ul>
-                <li>Web</li>
-                <li>씨애랑만의 개발 커뮤니티</li>
-                <li>완성한 프로젝트를 업로드하고 열매를 얻어보세요!</li>
-              </ul>
-              <div class="btn">
-                <h4>Learn More</h4>
-                <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cardContainer inactive">
-        <div class="card">
-          <div class="side front">
-            <div class="img img1">
-              <img src="/ssim-zang2/images/ex1.jpg" alt="">
-            </div>
-            <div class="info">
-              <h2>Caerang WebSite</h2>
-              <p>씨애랑 웹사이트로 깃허브 커밋이나 개발한 프로젝트 업로드하여 열매를 얻을 수 있습니다.
-              </p>
-            </div>
-          </div>
-          <div class="side back">
-            <div class="info">
-              <h2>Caerang WebSite</h2>
-              <!-- <div class="reviews">
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs><path d="M0 0h24v24H0V0z" id="a"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-                </svg>
-                <p>23 Reviews</p>
-              </div> -->
-              <ul>
-                <li>Web</li>
-                <li>씨애랑만의 개발 커뮤니티</li>
-                <li>완성한 프로젝트를 업로드하고 열매를 얻어보세요!</li>
+                <li>[ Laon ] Game</li>
+                <li>실감나는 드라이빙 게임</li>
+                <li>실제와 같이 실감 나는 드라이브를 vr 기기를 통해 즐기실 수 있습니다!</li>
+                <li>저희가 개발한 게임을 체험해주세요.</li>
               </ul>
               <div class="btn">
                 <h4>View More</h4>
@@ -164,174 +81,212 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>      
 
+      <!-- 3 -->
       <div class="cardContainer inactive">
         <div class="card">
           <div class="side front">
             <div class="img img1">
-              <img src="/ssim-zang2/images/ex2.jpg" alt="">
+              <img src="/static/images/pj3.jpg" alt="출처: freepik">
             </div>
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <p>씨애랑 웹사이트로 깃허브 커밋이나 개발한 프로젝트 업로드하여 열매를 얻을 수 있습니다.
+              <h2>반려동물용품 With</h2>
+              <p> 자신의 소중한 반려동물을 위한 친환경적으로 만들어진 제품을 추천하는 웹사이트입니다.
               </p>
             </div>
           </div>
           <div class="side back">
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <!-- <div class="reviews">
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs><path d="M0 0h24v24H0V0z" id="a"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-                </svg>
-                <p>23 Reviews</p>
-              </div> -->
+              <h2>반려동물용품 온라인 쇼핑몰</h2>
               <ul>
-                <li>Web</li>
-                <li>씨애랑만의 개발 커뮤니티</li>
-                <li>완성한 프로젝트를 업로드하고 열매를 얻어보세요!</li>
+                <li>[ Tag ] Web</li>
+                <li>반려동물을 위한</li>
+                <li>환경을 위한</li>
+                <li>소비를 with와 함께 해주세요.</li>
               </ul>
               <div class="btn">
-                <h4>Learn More</h4>
+                <h4>View More</h4>
                 <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>       
 
+      <!-- 4 -->
       <div class="cardContainer inactive">
         <div class="card">
           <div class="side front">
             <div class="img img1">
-              <img src="/ssim-zang2/images/ex3.jpg" alt="">
+              <img src="/static/images/pj5.png" alt="출처: freepik">
             </div>
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <p>씨애랑 웹사이트로 깃허브 커밋이나 개발한 프로젝트 업로드하여 열매를 얻을 수 있습니다.
+              <h2>콘솔 게임</h2>
+              <p>콘솔을 사용하여 카트을 즐길 수 있는 게임입니다.
               </p>
             </div>
           </div>
           <div class="side back">
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <!-- <div class="reviews">
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs><path d="M0 0h24v24H0V0z" id="a"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-                </svg>
-                <p>23 Reviews</p>
-              </div> -->
+              <h2>카트 게임</h2>
               <ul>
-                <li>Web</li>
-                <li>씨애랑만의 개발 커뮤니티</li>
-                <li>완성한 프로젝트를 업로드하고 열매를 얻어보세요!</li>
+                <li>[ Laon ] Game</li>
+                <li>신나는 카트 게임</li>
+                <li>친구와 함께 듀얼로</li>
+                <li>카트 게임을 즐겨보세요</li>
               </ul>
               <div class="btn">
-                <h4>Learn More</h4>
+                <h4>View More</h4>
                 <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>     
 
-
+      <!-- 5 -->
       <div class="cardContainer inactive">
         <div class="card">
           <div class="side front">
             <div class="img img1">
-              <img src="/ssim-zang2/images/ex2.jpg" alt="">
+              <img src="/static/images/pj4.png" alt="출처: freepik">
             </div>
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <p>씨애랑 웹사이트로 깃허브 커밋이나 개발한 프로젝트 업로드하여 열매를 얻을 수 있습니다.
+              <h2>면접 인터뷰 연습 프로그램</h2>
+              <p> AI가 건네는 질문을 통해 현장감 있는 면접 연습을 할 수 있습니다.
               </p>
             </div>
           </div>
           <div class="side back">
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <!-- <div class="reviews">
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs><path d="M0 0h24v24H0V0z" id="a"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-                </svg>
-                <p>23 Reviews</p>
-              </div> -->
+              <h2>반려동물용품 온라인 쇼핑몰</h2>
               <ul>
-                <li>Web</li>
-                <li>씨애랑만의 개발 커뮤니티</li>
-                <li>완성한 프로젝트를 업로드하고 열매를 얻어보세요!</li>
+                <li>[ Tensor ] AI</li>
+                <li>취업준비생들을 위한</li>
+                <li>현장감 있고 긴장되는</li>
+                <li>면접을 연습해보세요.</li>
               </ul>
               <div class="btn">
-                <h4>Learn More</h4>
+                <h4>View More</h4>
                 <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>      
 
+
+      <!-- 6 -->
       <div class="cardContainer inactive">
         <div class="card">
           <div class="side front">
             <div class="img img1">
-              <img src="/ssim-zang2/images/ex3.jpg" alt="">
+              <img src="/static/images/pj6.png" alt="출처: freepik">
             </div>
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <p>씨애랑 웹사이트로 깃허브 커밋이나 개발한 프로젝트 업로드하여 열매를 얻을 수 있습니다.
+              <h2>SIGNATURE</h2>
+              <p> 자신의 네트워크 트래픽을 캡쳐하고 업로드하여 데이터 분석 및 솔루션을 받아보세요.
               </p>
             </div>
           </div>
           <div class="side back">
             <div class="info">
-              <h2>Caerang WebSite</h2>
-              <!-- <div class="reviews">
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs><path d="M0 0h24v24H0V0z" id="a"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-                </svg>
-                <p>23 Reviews</p>
-              </div> -->
+              <h2>자동화된 보안 솔루션 사이트</h2>
               <ul>
-                <li>Web</li>
-                <li>씨애랑만의 개발 커뮤니티</li>
-                <li>완성한 프로젝트를 업로드하고 열매를 얻어보세요!</li>
+                <li>[ Tag ] Web, 보안</li>
+                <li>네트워크 트래픽 캡쳐</li>
+                <li>네트워크 분석 및 보안 공격유형 감지</li>
+                <li>보안 솔루션 추천</li>
               </ul>
               <div class="btn">
-                <h4>Learn More</h4>
+                <h4>View More</h4>
                 <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>      
 
 
+      <!-- 7 -->
+      <div class="cardContainer inactive">
+        <div class="card">
+          <div class="side front">
+            <div class="img img1">
+              <img src="/static/images/pj7.jpg" alt="출처: freepik">
+            </div>
+            <div class="info">
+              <h2>여행 경로 추천 사이트</h2>
+              <p> 자신이 원하는 지역을 입력하고 여행 경로를 추천받을 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <div class="side back">
+            <div class="info">
+              <h2>여행 경로 추천 사이트</h2>
+              <ul>
+                <li>[ Tag ] Web</li>
+                <li>자신이 원하는 지역 입력</li>
+                <li>원하는 음식점, 카페를 입력하고</li>
+                <li>경로와 가까운 여행지를 추천합니다.</li>
+              </ul>
+              <div class="btn">
+                <h4>View More</h4>
+                <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>          
+
+
+      <!-- 8 -->
+      <div class="cardContainer inactive">
+        <div class="card">
+          <div class="side front">
+            <div class="img img1">
+              <img src="/static/images/pj8.png" alt="출처: freepik">
+            </div>
+            <div class="info">
+              <h2>ACP</h2>
+              <p> 나만의 커스텀 필기구를 주문하고 사용해볼수 있는 사이트입니다.
+              </p>
+            </div>
+          </div>
+          <div class="side back">
+            <div class="info">
+              <h2>커스텀 필기구 사이트</h2>
+              <ul>
+                <li>[ Tag ] Web</li>
+                <li># 커스텀</li>
+                <li>나만의 커스텀 필기구를 주문하고</li>
+                <li>사용해보세요.</li>
+              </ul>
+              <div class="btn">
+                <h4>View More</h4>
+                <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
         
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+
 
 
     </div>
 
-    <div id="pagination">
-
-    </div>
   </div>
 
 {% endblock %}

@@ -39,7 +39,6 @@ header,footer,ul, li {
 
 
 /* Section/Article */
-
 header.special {
     text-align: center;
 }
@@ -143,8 +142,14 @@ footer.major {
                     outline: 0;
                 }
 
+                #header nav ul li a {
+                    color: lightgrey;
+                }
+
                 #header nav ul li span {
-                    color: #27d01e;
+                    /* color: #27d01e; */
+                    color: #27a021;
+                    /* font-size: 17px; */
                 }
 
                     #header nav ul li a.button, #header nav ul li span.button {

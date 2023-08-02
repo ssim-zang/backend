@@ -31,6 +31,23 @@ def logout(request):
         return redirect('/')
     except:
         return redirect('/')
+    
+def update(request):
+    try:
+        data = {}
+        post = request.POST
+        for key in post.keys():
+            data[key] = post[key]
+        del data['csrfmiddlewaretoken']
+        print(data)
+        Member.objects.filter(pk=request.session['id']).update(**data)
+        # get_object_or_404(Member, pk=request.session['id']).update(post)
+        return HttpResponse(status=200)
+    except Exception as e:
+        print(e)
+        return HttpResponse(status=400)
+    
+
 # def read(pk):
 #     try:
 #             question = get_object_or_404(Question, pk=question_id)

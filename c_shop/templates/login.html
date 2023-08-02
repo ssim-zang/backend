@@ -67,7 +67,7 @@
 
 <!-- 페이지별 추가 스크립트 추가 -->
 {% block extra_script %}
-
+<script  src="{% static 'js/login.js'%}"></script>
 <script>
     function signIn(obj) {
       if (!obj.id.value) {
@@ -125,3 +125,5 @@
     
     </script>
 {% endblock %}
+
+

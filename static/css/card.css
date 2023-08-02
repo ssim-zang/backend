@@ -2,7 +2,14 @@
     box-sizing: border-box; }
 
 body {
-    background-color: #555;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 27px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px; 
 }
   
 .card h2, h4, p, ul, li {
@@ -19,14 +26,7 @@ body {
     list-style-type: disc;
 }
   
-h2 {
-    font-size: 27px;
-    font-weight: 500;
-    letter-spacing: -0.2px;
-    margin-bottom: 10px; 
-}
-  
-.card p li {
+.card p, li {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     /* color: #555; */
@@ -42,21 +42,11 @@ h2 {
   ul {
     padding-left: 20px; }
   
-  /* svg {
-    margin: 0px;
-    min-width: 24px;
-    min-height: 24px; } */
+
   
   body {
-    /* background-color: #dadce2; */
-    /* background-image: linear-gradient(140deg, white, #dadce2); */
-    margin: 0;
-    /* width: 100vw; */
-    /* min-height: 450px; */
-    /* height: 100vh; */
-    /* display: flex; */
-    /* align-items: center; */
-     /* justify-content: center;  */
+        margin: 0;
+
     } 
   
 .cardContainer {
@@ -109,15 +99,13 @@ h2 {
       border-radius: 5px;
       background-color: white; }
     .card .front {
-      z-index: 2; 
-        /* background-color: #FAE392; */
-        /* background-color:#dadce2; */
-        background-color: floralwhite;
+        z-index: 2; 
+        background-color: white;
     }
     .card .back {
       transform: rotateY(180deg); 
       /* background-color: #FAE392; */
-      background-color: floralwhite;
+      background-color: #f2f2f2;
     }
     .card .info {
       padding: 18px; 
@@ -209,7 +197,7 @@ h2 {
 
 #cardOuterbox {
     position: relative;
-    padding: 320px 0 20px;
+    padding: 300px 0 50px;
     background-color: white;
     margin: -165px 0 0;
     background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;;
@@ -217,7 +205,7 @@ h2 {
 
 #cardBox {
     /* padding: 0 5rem; */
-    padding: 20px 3rem 20px;
+    padding: 36px 3rem 140px;
     position: relative;
     width: 100%;
     display: flex;
@@ -252,6 +240,56 @@ h2 {
 
 
 
-body {
-    overflow-x: hidden;
-}
+
+/* 페이지네이션 */
+
+.pagination {
+    display: inline-block;
+    position: absolute;
+    bottom: 54px;
+  }
+  
+  .pagination a {
+    color: black;
+    /* float: left; */
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #1a174d;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+
+
+  /* 프로젝트 업로드 버튼 */
+
+  #writeProject {
+    /* position: absolute; */
+    width: 140px;
+    height: 40px;
+    line-height: 100%;
+    text-align: center;
+    color: white;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  #writeProject:hover {
+    scale: 1.05;
+    cursor: pointer;
+  }
+
+
+

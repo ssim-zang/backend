@@ -4,17 +4,20 @@ class Member(models.Model):
     _id = models.CharField(max_length=200, primary_key=True)
     pw = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
-    github = models.CharField(max_length=200, null=True, default=None)
+    github = models.CharField(max_length=200, default="")
     isOB = models.BooleanField(default=False)
     currentCoin = models.IntegerField(default = 0)
     sumCoin = models.IntegerField(default = 0)
+    email = models.CharField(max_length=200, default="")
+    address = models.CharField(max_length=200, default="")
+    city = models.CharField(max_length=200, default="")
+    country = models.CharField(max_length=200, default="")
+    postalCode = models.TextField(max_length=200, default="")
+    aboutMe = models.TextField(max_length=200, default="")
+    plantName = models.TextField(default="애랑이")
+    plantExp = models.IntegerField(default = 0)
+    plantRebirth = models.IntegerField(default = 0)
     
-class Plant(models.Model):
-    name = models.TextField(default="애랑이")
-    member = models.OneToOneField(Member, on_delete=models.CASCADE)
-    exp = models.IntegerField(default = 0)
-    rebirth = models.IntegerField(default = 0)
-
 
 class Board(models.Model):
     user = models.ForeignKey(Member, on_delete=models.CASCADE)
@@ -38,9 +41,11 @@ class BoardImages(models.Model):
     
 class Company(models.Model):
     name = models.CharField(max_length=200, primary_key=True)
-    member = models.ForeignKey(Member, on_delete=models.CASCADE) # 해당 기업을 재화로 산 사람
+    obName = models.CharField(max_length=200)
+    job = models.CharField(max_length=200)
     summary = models.TextField(default="")
-    content = models.TextField(default="")
-    category = models.TextField(default="")
-    images = models.TextField(default="")
+    effect = models.TextField(default="")
+    price = models.TextField(default="")
+    logoImages = models.TextField(default="")
+    backgroundImages = models.TextField(default="")
     

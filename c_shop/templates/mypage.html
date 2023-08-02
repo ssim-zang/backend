@@ -40,7 +40,7 @@
                         <img alt="Image placeholder" src="{% static 'images/profileimg/defaultimg.png'%}">
                       </span>
                       <div class="media-body ml-2 d-none d-lg-block">
-                        <span class="mb-0 text-sm  font-weight-bold">Anonymous Friends(사용자 이름)</span>
+                        <span class="mb-0 text-sm  font-weight-bold">{{data.name}}</span>
                       </div>
                     </div>
                   </a>
@@ -119,15 +119,15 @@
                       <div class="col">
                         <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                           <div>
-                            <span class="heading">100</span>
+                            <span class="heading">{{data.currentCoin}}</span>
                             <span class="description">남은 열매</span>
                           </div>
                           <div>
-                            <span class="heading">8</span>
+                            <span class="heading">{{data.plantRebirth}}</span>
                             <span class="description">환생횟수</span>
                           </div>
                           <div>
-                            <span class="heading">12</span>
+                            <span class="heading">{{myBoard}}</span>
                             <span class="description">내 게시물</span>
                           </div>
                         </div>
@@ -136,30 +136,41 @@
 
                     <div class="text-center">
                       <h3>
-                        Kim aerang(이름)<span class="font-weight-light">, 2(나이)</span>
+                        {{data.name}}<span class="font-weight-light"></span>
                       </h3>
                       <div class="h5 font-weight-300">
-                        <i class="ni location_pin mr-2"></i>Cuncheon, South Korea(사는 도시)
+                        <i class="ni location_pin mr-2"></i>{{data.address}}
                       </div>
-                      <div class="h5 mt-4">
+                      <!-- <div class="h5 mt-4">
                         <i class="ni business_briefcase-24 mr-2"></i>Junior(3rd grade) - 학년
                       </div>
                       <div>
                         <i class="ni education_hat mr-2"></i>University of SoftwareConvergence - 전공
-                      </div>
+                      </div> -->
                       <hr class="my-4">
-                      <p>이력<br> (1) Pentagon - Vice President<br>(2) Cearang - Finance department<br>(3) Dream(5th Contents IT Sudentgroup) - Planning General</p>
-                      <a href="#">Show more</a>
+                      <p id="aboutMeTag"style="overflow: hidden;max-height: 6.9em;line-height: 1.35em;"
+                         ><strong>About Me</strong><br>{{data.aboutMe}}</p>
+                      <a href="#aboutMeTag" onclick="clickShowMore(); this.innerText= aboutMeShowMore ? 'Fold' : 'Show more'">Show more</a>
                     </div>
 
                     <div class="blocking_block"><p class="blocking_block__text">Grow the Seed!!</p> <hr> </div>
 
                     <div class="text-center">
                         <div class="text-center__seedpart">
-                            <img src="{% static 'images/seedimg/Seed-lev7.png'%}" alt="seedimg">
+                            <img id="fruitImg"src="{% static 'images/seedimg/Seed-lev' %}" alt="seedimg">
                         </div>
-                        <div class="text-center__fruitNum">
-                            <img src="{% static 'images/seedimg/fruit.png'%}" alt="fruitimg"><p class="text-center__fruitNum__text">&nbsp;&nbsp;x&nbsp;100</p>
+                        <div class="text-center__fruitNum" >
+                            <div style="position: relative;">
+                            <p class="expbar" style="left:0;position:absolute;background-color:gray;"></p>
+                            <p class="expbar" id="expBar" style="left:0;width:50%;position:absolute;"></p>  
+                            <p class="expbar" id="expBarText" style="left:0;position:absolute;background-color:transparent;">Exp: </p>
+                                
+                            <!-- <p class="expbar" style="position:absolute;background-color:gray;">Exp: 93%</p>
+                            <p class="expbar" style="position:absolute;width:73%;"></p>  
+                                <p class="expbar" style="position:absolute;width:0;background-color: transparent;">Exp: 73%</p>   -->
+                            </div>
+                            <img src="{% static 'images/seedimg/fruit.png'%}" alt="fruitimg" style="margin-top:42px;">
+                            <p style="padding-top:46px;vertical-align: middle;" class="text-center__fruitNum__text">&nbsp;&nbsp;x&nbsp;{{data.currentCoin}}</p>
                         </div>
                     </div>
 
@@ -175,26 +186,28 @@
                         <h3 class="mb-0">My account</h3>
                       </div>
                       <div class="col-4 text-right">
-                        <a href="#!" class="btn btn-sm btn-primary">Done</a>
+                        <a href="#" id="editProfileDone" class="btn btn-sm btn-primary">Done</a>
                       </div>
                     </div>
                   </div>
                   <div class="card-body">
                     <!-- form start -->
-                    <form>
+                    <form id="editProfile">
+                        {% csrf_token %}
+
                       <h6 class="heading-small text-muted mb-4">User information</h6>
                       <div class="pl-lg-4">
                         <div class="row">
                           <div class="col-lg-6">
                             <div class="form-group focused">
                               <label class="form-control-label" for="input-username">ID</label>
-                              <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="ID">
+                              <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="{{data.pk}}" disabled>
                             </div>
                           </div>
                           <div class="col-lg-6">
                             <div class="form-group">
                               <label class="form-control-label" for="input-email">Email address</label>
-                              <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="Anonymous@example.com">
+                              <input name="email" type="email" id="input-email" class="form-control form-control-alternative" placeholder="Anonymous@example.com" value="{{data.email}}">
                             </div>
                           </div>
                         </div>
@@ -202,13 +215,13 @@
                           <div class="col-lg-6">
                             <div class="form-group focused">
                               <label class="form-control-label" for="input-first-name">Name</label>
-                              <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Kim earang">
+                              <input name="name" type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{data.name}}">
                             </div>
                           </div>
                           <div class="col-lg-6">
                             <div class="form-group focused">
                               <label class="form-control-label" for="input-last-name">Password</label>
-                              <input type="password" id="input-last-name" class="form-control form-control-alternative" placeholder="Password" value="1234">
+                              <input name="pw" type="password" id="input-last-name" class="form-control form-control-alternative" placeholder="Password" value="{{data.pw}}">
                             </div>
                           </div>
                         </div>
@@ -222,7 +235,7 @@
                           <div class="col-md-12">
                             <div class="form-group focused">
                               <label class="form-control-label" for="input-address">Address</label>
-                              <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Hallym.Univ, SeongHoGwan" type="text">
+                              <input name="address" id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="{{data.address}}" type="text">
                             </div>
                           </div>
                         </div>
@@ -230,19 +243,19 @@
                           <div class="col-lg-4">
                             <div class="form-group focused">
                               <label class="form-control-label" for="input-city">City</label>
-                              <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="Gangwondo">
+                              <input name="city" type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="{{data.city}}">
                             </div>
                           </div>
                           <div class="col-lg-4">
                             <div class="form-group focused">
                               <label class="form-control-label" for="input-country">Country</label>
-                              <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="Republic of South Korea">
+                              <input name="country" type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="{{data.contry}}">
                             </div>
                           </div>
                           <div class="col-lg-4">
                             <div class="form-group">
                               <label class="form-control-label" for="input-country">Postal code</label>
-                              <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
+                              <input name="postalCode" type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code" value="{{data.postalCode}}">
                             </div>
                           </div>
                         </div>
@@ -254,7 +267,7 @@
                       <div class="pl-lg-4">
                         <div class="form-group focused">
                           <label>About Me</label>
-                          <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">I entered this university in 2019&#10Github link: https://github.com/ssim-zang</textarea>
+                          <textarea name="aboutMe" rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">{{data.aboutMe}}</textarea>
                         </div>
                     </div>
 
@@ -278,7 +291,43 @@
 
 <!-- 페이지별 추가 스크립트 추가 -->
 {% block extra_script %}
-<script src="{% static 'js/mypage2.js'%}" defer></script>
+<script src="{% static 'js/mypage.js'%}" defer></script>
+<script>
+var aboutMeShowMore = false;
+    
+    function clickShowMore(){
+        var obj = document.getElementById('aboutMeTag');
+        if(aboutMeShowMore){
+            // obj.style.overflow= 'hidden';
+            obj.style.maxHeight= '6.9em';
+        }else{
+            obj.style.maxHeight= null;
+        }
+        aboutMeShowMore = !aboutMeShowMore;
+    }
+    
+$(document).ready(function (){
+  $("#editProfileDone").click(function () {
+  $.ajax({
+    type: "POST",
+    url: "{% url 'memberUpdate' %}",
+    data: $("#editProfile").serialize(),
+    success: function(data) {
+        alert(data);
+    },
+      error: function (xhr, status, error) {
+          alert(error);
+        }
+  });
+});
+  });
+    
+    document.getElementById("fruitImg").src += parseInt({{data.plantExp}} % 700 / 100) + ".png";
+    document.getElementById("expBarText").innerText += {{data.plantExp}} % 700 % 100 + "%";
+    document.getElementById("expBar").style.width = {{data.plantExp}} % 700 % 100+ "%";
+    
+    
+</script>
 {% endblock %}
 
 

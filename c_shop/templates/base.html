@@ -23,22 +23,25 @@
 
     <div id="page-wrapper">
 
-        <!-- Header -->
-        <header id="header">
-          <h1 id="logo"><a href="index.html">C#</a></h1>
-          <nav id="nav">
-            <ul>
+                 <!-- Header -->
+            <header id="header">
+               <h1 id="logo"><a href="/">C#</a></h1>
+               <nav id="nav">
+                  <ul>
               <li><a href="{% url 'index' %}">Home</a></li>
               <li><a href="{% url 'project' %}">Project</a></li>
-              <li>
-                <a href="#">Connect</a>
-                <ul>
-                  <li><a href="community.html">Community</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </li>
+                     <li>
+                        <a href="#">Community</a>
+                        <ul>
+                           <li><a href="{% url 'communityList' %}">자유게시판</a></li>
+                           <li><a href="{% url 'communityList' %}">구인구직게시판</a></li>
+                           <li><a href="{% url 'communityList' %}">공지사항</a></li>
+                           <li><a href="{% url 'communityList' %}">연혁</a></li>
+                        </ul>
+                     </li>
               <li><a href="{% url 'shop' %}">Shop</a></li>
-
+                     
+                     
                 {% if request.session.id %}
                 <!-- 로그인 했을 때 -->
                 <li><a href="{% url 'myPage' %}">Mypage</a></li>
@@ -47,11 +50,10 @@
                 <!-- 로그인 안했을 때 -->
                 <li><a href="{% url 'login' %}" class="button primary">Sign In</a></li>
                 {% endif%}
-
-            </ul>
-          </nav>
-        </header>
-
+                  </ul>
+               </nav>
+            </header>
+        
 
         <!-- 자식 템플릿에서 블록 재정의 -->
         {% block content %}
