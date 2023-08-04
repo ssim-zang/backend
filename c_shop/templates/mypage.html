@@ -85,7 +85,7 @@
             <div class="container-fluid d-flex align-items-center">
               <div class="row">
                 <div class="col-lg-7 col-md-10">
-                  <h1 class="display-2 text-white">Hello Friends!</h1>
+                  <h1 class="display-2 text-white">Hello, {{data.name}}!</h1>
                   <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
                   <a href="#editProfileBody" class="btn btn-info">Edit profile</a>
                 </div>
@@ -119,15 +119,15 @@
                       <div class="col">
                         <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                           <div>
-                            <span class="heading">{{data.currentCoin}}</span>
+                            <span class="heading">175</span>
                             <span class="description">남은 열매</span>
                           </div>
                           <div>
-                            <span class="heading">{{data.plantRebirth}}</span>
+                            <span class="heading">80</span>
                             <span class="description">환생횟수</span>
                           </div>
                           <div>
-                            <span class="heading">{{myBoard}}</span>
+                            <span class="heading">24</span>
                             <span class="description">내 게시물</span>
                           </div>
                         </div>
@@ -149,7 +149,7 @@
                       </div> -->
                       <hr class="my-4">
                       <p id="aboutMeTag"style="overflow: hidden;max-height: 6.9em;line-height: 1.35em;"
-                         ><strong>About Me</strong><br>{{data.aboutMe}}</p>
+                         ><strong>About Me</strong><br>{{data.aboutMe| linebreaksbr }}</p>
                       <a href="#aboutMeTag" onclick="clickShowMore(); this.innerText= aboutMeShowMore ? 'Fold' : 'Show more'">Show more</a>
                     </div>
 
@@ -170,7 +170,7 @@
                                 <p class="expbar" style="position:absolute;width:0;background-color: transparent;">Exp: 73%</p>   -->
                             </div>
                             <img src="{% static 'images/seedimg/fruit.png'%}" alt="fruitimg" style="margin-top:42px;">
-                            <p style="padding-top:46px;vertical-align: middle;" class="text-center__fruitNum__text">&nbsp;&nbsp;x&nbsp;{{data.currentCoin}}</p>
+                            <p style="padding-top:46px;vertical-align: middle;" class="text-center__fruitNum__text">&nbsp;&nbsp;x&nbsp;175</p>
                         </div>
                     </div>
 
@@ -322,9 +322,9 @@ $(document).ready(function (){
 });
   });
     
-    document.getElementById("fruitImg").src += parseInt({{data.plantExp}} % 700 / 100) + ".png";
-    document.getElementById("expBarText").innerText += {{data.plantExp}} % 700 % 100 + "%";
-    document.getElementById("expBar").style.width = {{data.plantExp}} % 700 % 100+ "%";
+    document.getElementById("fruitImg").src += parseInt(742 % 800 / 100) + ".png";
+    document.getElementById("expBarText").innerText += 742 % 800 % 100 + "%";
+    document.getElementById("expBar").style.width = 742 % 800 % 100+ "%";
     
     
 </script>
